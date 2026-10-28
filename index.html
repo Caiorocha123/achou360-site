@@ -1,46 +1,312 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="ACHOU360 — achadinhos e ofertas selecionadas. Encontrou, gostou, comprou!">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#101010">
-<title>ACHOU360 | Encontrou, gostou, comprou!</title>
+<meta name="description" content="ACHOU360 - Encontrou, gostou, comprou!">
+<title>ACHOU360 | Achadinhos e Ofertas</title>
+
 <style>
-:root{--preto:#101010;--amarelo:#ffd21a;--branco:#fff;--fundo:#f5f5f5}
-*{box-sizing:border-box}body{margin:0;background:var(--fundo);color:#171717;font-family:Arial,Helvetica,sans-serif}
-header{background:var(--preto);color:white;border-bottom:5px solid var(--amarelo);padding:22px 5%}
-.limite{max-width:1120px;margin:auto}.topo{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.marca{font-size:clamp(34px,7vw,50px);font-weight:900;letter-spacing:1px}.marca span{color:var(--amarelo)}
-.slogan{font-size:12px;letter-spacing:2px;color:#eee;margin-top:3px}
-.botao-topo{background:var(--amarelo);color:#111;text-decoration:none;padding:12px 17px;border-radius:30px;font-weight:900}
-.hero{padding:38px 5% 26px}.hero h1{font-size:clamp(27px,5vw,39px);margin:0 0 9px}.hero p{color:#555;line-height:1.55;margin:0;max-width:680px}
-.secao{padding:5px 5% 38px}.secao h2{font-size:24px;margin:8px 0 18px}
-.grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:18px}
-.card{background:white;border:1px solid #e6e6e6;border-radius:15px;overflow:hidden;box-shadow:0 5px 18px #0000000b;display:flex;flex-direction:column}
-.foto{height:235px;background:#fff;display:flex;align-items:center;justify-content:center;padding:9px}
-.foto img{width:100%;height:100%;object-fit:contain}
-.info{padding:15px;display:flex;flex-direction:column;flex:1}.info h3{font-size:17px;line-height:1.3;margin:0 0 9px;min-height:42px}
-.preco{font-size:22px;font-weight:900}.detalhe{font-size:12px;color:#777;line-height:1.45;margin:7px 0 14px}
-.comprar{display:block;margin-top:auto;text-align:center;text-decoration:none;background:var(--amarelo);color:#111;padding:13px 10px;border-radius:9px;font-weight:900}
-.loja{margin:0 5% 30px;background:#111;color:#fff;padding:25px;border-radius:16px;text-align:center}
-.loja p{color:#ddd;font-size:14px}.loja a{display:inline-block;background:var(--amarelo);color:#111;text-decoration:none;padding:13px 20px;border-radius:30px;font-weight:900}
-.aviso{padding:0 5% 22px;color:#666;font-size:12px;line-height:1.5}
-footer{background:#111;color:#ccc;text-align:center;padding:23px 15px;font-size:12px;line-height:1.7}footer strong{color:#fff}
-@media(max-width:520px){.foto{height:215px}.topo{align-items:flex-start}.botao-topo{font-size:13px}}
-</style></head>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #171717;
+}
+
+header {
+  background: #101010;
+  color: white;
+  border-bottom: 5px solid #ffd21a;
+  padding: 22px 5%;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 43px;
+  font-weight: 900;
+}
+
+.logo span { color: #ffd21a; }
+
+.slogan {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.botao {
+  display: inline-block;
+  background: #ffd21a;
+  color: #111;
+  padding: 13px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  padding: 40px 5% 25px;
+}
+
+.hero h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.produtos {
+  padding: 15px 5% 40px;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px #00000012;
+}
+
+.foto {
+  height: 240px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.info h3 {
+  min-height: 42px;
+  font-size: 17px;
+  margin: 0 0 10px;
+}
+
+.preco {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.detalhe {
+  color: #777;
+  font-size: 12px;
+  margin: 10px 0 16px;
+  line-height: 1.5;
+}
+
+.comprar {
+  display: block;
+  text-align: center;
+  background: #ffd21a;
+  color: #111;
+  padding: 13px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 900;
+  margin-top: auto;
+}
+
+.comprar:hover, .botao:hover {
+  background: #e9bd00;
+}
+
+.loja {
+  background: #111;
+  color: white;
+  text-align: center;
+  margin: 0 5% 30px;
+  padding: 28px;
+  border-radius: 15px;
+}
+
+.loja p { color: #ddd; }
+
+.aviso {
+  padding: 0 5% 25px;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+footer strong { color: white; }
+
+@media(max-width: 520px) {
+  .logo { font-size: 36px; }
+  .hero h1 { font-size: 27px; }
+  .foto { height: 215px; }
+}
+</style>
+</head>
+
 <body>
-<header><div class="limite topo"><div><div class="marca">ACHOU<span>360</span></div><div class="slogan">ENCONTROU, GOSTOU, COMPROU!</div></div><a class="botao-topo" href="https://collshp.com/achou360?view=storefront" target="_blank" rel="noopener">VER LOJA NA SHOPEE ↗</a></div></header>
+
+<header>
+  <div class="container topo">
+    <div>
+      <div class="logo">ACHOU<span>360</span></div>
+      <div class="slogan">ENCONTROU, GOSTOU, COMPROU!</div>
+    </div>
+
+    <a class="botao"
+       href="https://collshp.com/achou360?view=storefront"
+       target="_blank" rel="noopener">
+       VER LOJA NA SHOPEE ↗
+    </a>
+  </div>
+</header>
+
 <main>
-<section class="hero limite"><h1>Seus próximos achadinhos estão aqui.</h1><p>Produtos selecionados para facilitar seu dia a dia. Confira as ofertas e escolha seu favorito!</p></section>
-<section class="secao limite"><h2>Achadinhos em destaque</h2><div class="grade">
-<article class="card"><div class="foto"><img src="imagens/panelas.jpg" alt="Jogo de panelas de 6 peças"></div><div class="info"><h3>Jogo de panelas 6 peças</h3><div class="preco">R$ 339,90</div><div class="detalhe">Avaliação informada: 4,9 estrelas</div><a class="comprar" href="https://collshp.com/achou360?linkId=45787436&view=storefront" target="_blank" rel="noopener">VER OFERTA NA SHOPEE</a></div></article>
-<article class="card"><div class="foto"><img src="imagens/mop.jpg" alt="Mop giratório com balde de 14 litros"></div><div class="info"><h3>Mop giratório com balde 14L</h3><div class="preco">R$ 59,90–69,90</div><div class="detalhe">Acompanha 2 refis • Avaliação informada: 4,8 estrelas</div><a class="comprar" href="https://collshp.com/achou360?linkId=45787533&view=storefront" target="_blank" rel="noopener">VER OFERTA NA SHOPEE</a></div></article>
-<article class="card"><div class="foto"><img src="imagens/fatiador.jpg" alt="Fatiador multifuncional 16 em 1"></div><div class="info"><h3>Fatiador multifuncional 16 em 1</h3><div class="preco">R$ 34,99–40,99</div><div class="detalhe">Avaliação informada: 4,9 estrelas</div><a class="comprar" href="https://collshp.com/achou360?linkId=45787672&view=storefront" target="_blank" rel="noopener">VER OFERTA NA SHOPEE</a></div></article>
-<article class="card"><div class="foto"><img src="imagens/carregador.jpg" alt="Carregador magnético sem fio"></div><div class="info"><h3>Carregador magnético sem fio</h3><div class="preco">R$ 28,85–30,85</div><div class="detalhe">Opções de 5.000 ou 10.000 mAh • Avaliação informada: 4,7 estrelas</div><a class="comprar" href="https://collshp.com/achou360?linkId=45788076&view=storefront" target="_blank" rel="noopener">VER OFERTA NA SHOPEE</a></div></article>
-<article class="card"><div class="foto"><img src="imagens/fone.jpg" alt="Fone Bluetooth P9 TWS"></div><div class="info"><h3>Fone Bluetooth P9 TWS</h3><div class="preco">R$ 22,99–62,99</div><div class="detalhe">Avaliação informada: 4,7 estrelas</div><a class="comprar" href="https://collshp.com/achou360?linkId=45788272&view=storefront" target="_blank" rel="noopener">VER OFERTA NA SHOPEE</a></div></article>
-<article class="card"><div class="foto"><img src="imagens/projetor.jpg" alt="Mini projetor HY300"></div><div class="info"><h3>Mini projetor HY300</h3><div class="preco">R$ 219,99</div><div class="detalhe">Avaliação informada: 4,8 estrelas</div><a class="comprar" href="https://collshp.com/achou360?linkId=45788299&view=storefront" target="_blank" rel="noopener">VER OFERTA NA SHOPEE</a></div></article>
-</div></section>
-<section class="loja limite"><h2>Quer ver todos os nossos achadinhos?</h2><p>Acesse a vitrine completa da ACHOU360 na Shopee.</p><a href="https://collshp.com/achou360?view=storefront" target="_blank" rel="noopener">ABRIR LOJA SHOPEE</a></section>
-<div class="aviso limite">Preços, estoque, avaliações e condições podem mudar sem aviso prévio. Confira os detalhes diretamente na Shopee antes de comprar.</div>
-</main><footer><strong>ACHOU360</strong><br>Encontrou, gostou, comprou!<br>A ACHOU360 pode receber comissão por compras realizadas por estes links de afiliado.</footer>
-</body></html>
+
+<section class="hero container">
+  <h1>Seus próximos achadinhos estão aqui!</h1>
+  <p>Produtos selecionados para facilitar seu dia a dia. Confira as ofertas e escolha seu favorito!</p>
+</section>
+
+<section class="produtos container">
+  <h2>Achadinhos em destaque</h2>
+
+  <div class="grade">
+
+    <article class="card">
+      <div class="foto">
+        <img src="./panelas.jpg" alt="Jogo de panelas" onerror="this.alt='Imagem não encontrada: panelas.jpg'">
+      </div>
+      <div class="info">
+        <h3>Jogo de panelas 6 peças</h3>
+        <div class="preco">R$ 339,90</div>
+        <div class="detalhe">Avaliação informada: 4,9 estrelas</div>
+        <a class="comprar" href="https://collshp.com/achou360?linkId=45787436&view=storefront" target="_blank" rel="noopener">VER OFERTA NA SHOPEE</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="foto">
+        <img src="./esfreg%C3%A3o.jpg" alt="Mop giratório">
+      </div>
+      <div class="info">
+        <h3>Mop giratório com balde 14L</h3>
+        <div class="preco">R$ 59,90–69,90</div>
+        <div class="detalhe">Acompanha 2 refis • Avaliação: 4,8 estrelas</div>
+        <a class="comprar" href="https://collshp.com/achou360?linkId=45787533&view=storefront" target="_blank" rel="noopener">VER OFERTA NA SHOPEE</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="foto">
+        <img src="./fatiado4.jpg" alt="Fatiador multifuncional">
+      </div>
+      <div class="info">
+        <h3>Fatiador multifuncional 16 em 1</h3>
+        <div class="preco">R$ 34,99–40,99</div>
+        <div class="detalhe">Avaliação informada: 4,9 estrelas</div>
+        <a class="comprar" href="https://collshp.com/achou360?linkId=45787672&view=storefront" target="_blank" rel="noopener">VER OFERTA NA SHOPEE</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="foto">
+        <img src="./carregador.jpg" alt="Carregador magnético">
+      </div>
+      <div class="info">
+        <h3>Carregador magnético sem fio</h3>
+        <div class="preco">R$ 28,85–30,85</div>
+        <div class="detalhe">Opções de 5.000 ou 10.000 mAh • Avaliação: 4,7 estrelas</div>
+        <a class="comprar" href="https://collshp.com/achou360?linkId=45788076&view=storefront" target="_blank" rel="noopener">VER OFERTA NA SHOPEE</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="foto">
+        <img src="./fone.jpg" alt="Fone Bluetooth P9">
+      </div>
+      <div class="info">
+        <h3>Fone Bluetooth P9 TWS</h3>
+        <div class="preco">R$ 22,99–62,99</div>
+        <div class="detalhe">Avaliação informada: 4,7 estrelas</div>
+        <a class="comprar" href="https://collshp.com/achou360?linkId=45788272&view=storefront" target="_blank" rel="noopener">VER OFERTA NA SHOPEE</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="foto">
+        <img src="./projetor.jpg" alt="Mini projetor HY300">
+      </div>
+      <div class="info">
+        <h3>Mini projetor HY300</h3>
+        <div class="preco">R$ 219,99</div>
+        <div class="detalhe">Avaliação informada: 4,8 estrelas</div>
+        <a class="comprar" href="https://collshp.com/achou360?linkId=45788299&view=storefront" target="_blank" rel="noopener">VER OFERTA NA SHOPEE</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="loja container">
+  <h2>Quer ver todos os nossos achadinhos?</h2>
+  <p>Acesse a vitrine completa da ACHOU360 na Shopee.</p>
+  <a class="botao" href="https://collshp.com/achou360?view=storefront" target="_blank" rel="noopener">ABRIR LOJA SHOPEE</a>
+</section>
+
+<div class="aviso container">
+  Preços, estoque, avaliações e condições podem mudar sem aviso prévio. Confira os detalhes diretamente na Shopee antes de comprar.
+</div>
+
+</main>
+
+<footer>
+  <strong>ACHOU360</strong><br>
+  Encontrou, gostou, comprou!<br>
+  A ACHOU360 pode receber comissão por compras realizadas por estes links de afiliado.
+</footer>
+
+</body>
+</html>
